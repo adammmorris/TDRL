@@ -85,7 +85,7 @@ end
 prevActions = zeros(1,numMoves);
 
 % Loop through each of the rounds
-for thisRound = 1:length(A1)
+for thisRound = 1:size(actions,1)
     % Only do rounds that aren't practice rounds
     if roundNum(thisRound) > practiceCutoff
         for thisMove = 1:numMoves
@@ -94,14 +94,17 @@ for thisRound = 1:length(A1)
             state = states(thisRound,thisMove);
             action = actions(thisRound,thisMove);
             % For newstate, if it's the last move we have to calculate it
-            if thisMove < numMoves, newstate = curStates(thisMove+1);
+            if thisMove < numMoves, newstate = states(thisRound,thisMove+1);
             else newstate = state*numActions+action-1; end
             reward = rewards(thisRound,thisMove);
             
             % MAKE MOVE
             
             % If combined, use policy; if not, add policies
-            temppolicy = policy*(comb==1)+(policyR+policyP)*(comb==0);
+            if comb==1,temppolicy = policy;
+            else temppolicy = policyR+policyP;
+            end
+            
             % Give stay bonus
             if prevActions(thisMove), temppolicy(state,prevActions(thisMove)) = policy(state,prevActions(thisMove))+stay; end
             % Do move
