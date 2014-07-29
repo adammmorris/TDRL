@@ -1,0 +1,38 @@
+Optimization 1 on Board2 soft randomized (Apr 5, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .5, alphaP = 0
+		Temps = .3
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR between .2 and .3
+		betaP between .1 and 1
+		fvals ~ 1480 to 1520
+		max fval was (.2, 1, 1525.8)
+	You could get about a 35 increase by setting betaR > betaP
+		
+Optimization 2 on Board2 soft randomized (Apr 5, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .5, alphaP = 0
+		Betas = .1
+		Optimizing over: tempR, tempP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		tempP between .5 and 1
+		betaP between .5 and 1
+		fvals ~ 1500
+		max fval was amorphous blob

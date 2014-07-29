@@ -1,0 +1,21 @@
+- These are all on the human board, Board13 (using ac_sep_twosteptask)
+
+Reward system only:
+- Maximized alphaR & betaR*tempR, holding all punishment params at 0
+- Best:
+alphaR = .4
+betaR * tempR = 1
+
+Punishment system with accurate reward params:
+- Maximized alphaP & betaP * tempP, setting alphaR = .4 and betaR * tempR = .4
+This is not strictly accurate, b/c with the subjects betaR*tempR was more like .03 lol
+But go with it.. I screwed up :P
+- Best:
+alphaP = 0
+betaP * tempP = 1
+
+Punishment system with optimal reward params:
+- Maximized alphaP & betaP * tempP, setting alphaR = .4 and betaR * tempR = 1
+- Best:
+alphaP = 0
+betaP * tempP = 1

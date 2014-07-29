@@ -1,0 +1,35 @@
+FOR HUMAN EXPERIMENT
+
+Opt 1/2:
+- numPlays = 50
+- Map_temp_undiff
+w/ betas [.1 .1]
+- Map_AB
+w/ optimal temp and betas [.1 .1]
+stochasticsm: short term, std_shift = 25
+- Results:
+maxtemp = 1
+
+Opt 3:
+- This was w/ Board13
+Basically an imitation of Daw's 2-step task (in order to help analyze Fiery's data)
+- Properties:
+stochasticTransitions = 1
+multiplyByFive = 0
+- Undifferentiated Betas: hardly any improvement after .5
+Undifferentiated Alphas: same thing (best score around 85-88)
+- Differentiated alphas:
+MUCH better when AlphaP = 0
+Best alphaR between .5 and 1 (best score around 105-110)
+
+Opt 4:
+- This is again w/ Board13
+Except this time transforming it to our purposes
+- Properties:
+stochasticTransitions = 0
+multiplyByFive = 0
+- Same as Opt3
+
+Opt 5:
+- Same as Opt4 in setup, except w/ random drifting instead of static drifting
+- Results: same as opt3 (best was .5,0)

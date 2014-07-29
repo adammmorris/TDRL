@@ -1,0 +1,73 @@
+Optimization 1 on Board4 soft randomized (Apr 7, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Betas = .1
+		Temps = .6
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .2 and .6
+		alphaP = 0
+		fvals ~ 1350
+		max fval was (.4, 0, 1360.8)
+		
+Optimization 2 on Board4 soft randomized (Apr 7, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Alphas = .1
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR between .2 and .5
+		betaP between 0 and .1
+		fvals ~ 1150
+		max fval was (.3, .1, 1155.6)
+		
+Optimization 3 on Board4 soft randomized (Apr 7, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .4, alphaP = 0
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR = .1
+		betaP between .3 and 1
+		fvals ~ 1400 to 1430
+		max fval was (.1, 1, 1433.8)
+	You could do about 100 better by having betaP > betaR
+		
+Optimization 4 on Board4 soft randomized (Apr 7, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		BetaR = .3, BetaP = .1
+		Temps = .6
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		fvals were significantly worse than Opt 3

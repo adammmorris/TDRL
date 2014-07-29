@@ -1,0 +1,8 @@
+RECOVERABILITY
+
+- Participants were simulated as follows:
+LRs ~ uniform(0,1)
+Temp ~ uniform(0,1.5)
+Gammas = .85
+
+- Correlation between real params and recovered params: .81

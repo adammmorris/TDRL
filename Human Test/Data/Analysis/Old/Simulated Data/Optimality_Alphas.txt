@@ -1,0 +1,35 @@
+Optimality_Alphas_1:
+
+- 2-step task (with 2 options)
+numInstances = 1000
+numPlays = 150
+- Br = .25, Bp = .25, Temp = .5, GammaR = GammaP = .85
+These were the optimal behavioral params from model ArApBT_Combined
+
+Optimality_Alphas_2:
+
+- 2-step task (with 2 options)
+numInstances = 1000
+numPlays = 150
+- Br = .47, Bp = .14, Temp = .57, GammaR = GammaP = .85
+These were the optimal behavior params from model ArApBrBpT_Combined
+
+Optimality_Alphas_3:
+
+- 2-step task (with 2 options)
+numInstances = 1000
+numPlays = 150
+- Br = .14, Bp = .47, Temp = .57, GammaR = GammaP = .85
+These were the optimal behavior params from model ArApBrBpT_Combined, but I switched betaR and betaP (just to show that it works if betaR < betaP)
+
+Optimality_Alphas_4:
+- 2-step task (with 2 options)
+numInstances = 1000
+numPlays = 150
+- Random betas/temp on each instance
+
+Optimality_Alphas_5:
+- 2-step task (with 2 options, stochastic transitions)
+numInstances = 1000
+numPlays = 150
+- Random betas/temp on each instance

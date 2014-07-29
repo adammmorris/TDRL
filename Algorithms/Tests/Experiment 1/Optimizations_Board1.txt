@@ -1,0 +1,104 @@
+\Optimization 1 on Board1 randomized (Mar 7, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 4 4]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.2612    0.8166    0.5053    0.1961    0.3122    0.6860    3.8124    4.7515
+		gammaR = .2612
+		alphaR = .8166
+		betaR = .5053
+		gammaP = .1961
+		alphaP = .3122
+		betaP = .6860
+		tempR = 3.8124
+		tempP = 4.7515
+	Fval = -86.5040
+	Output =
+			 function: @(x)ac_sep_1p1(x)
+		  problemtype: 'boundconstraints'
+		   pollmethod: 'gpspositivebasis2n'
+		 searchmethod: @searchlhs
+		   iterations: 39
+			funccount: 575
+			 meshsize: 9.5367e-07
+		maxconstraint: 0
+			  message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Optimization 2 on Board1 randomized (Mar 8, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 4 4]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.4873    0.7581    0.7187    0.1257    0.5097    0.7208    1.9269    3.6377
+	Fval = -85.9340
+	Output = 
+			 function: @(x)ac_sep_1p1(x)
+		  problemtype: 'boundconstraints'
+		   pollmethod: 'gpspositivebasis2n'
+		 searchmethod: @searchlhs
+		   iterations: 29
+			funccount: 483
+			 meshsize: 9.5367e-07
+		maxconstraint: 0
+			  message: 'Optimization terminated: mesh size less than options.TolMesh.'
+			  
+Optimization 3 on Board1 randomized (Mar 8, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 4 4]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.5, 'MeshContraction', .75, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.3524    0.9384    0.9092    0.7028    0.0985    0.7949    2.4114    3.9105
+	Fval = -87.3640
+	Output = 
+         function: @(x)ac_sep_1p1(x)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 81
+        funccount: 1101
+         meshsize: 8.2850e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Optimization 4 on Board1 randomized (Mar 8, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 4 4]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.5, 'MeshContraction', .75, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.8196    0.7992    0.3646    0.9205    0.0665    0.8922    3.0829    4.5040
+	Fval = -87.4120
+	Output = 
+         function: @(x)ac_sep_1p1(x)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 69
+        funccount: 1039
+         meshsize: 8.1735e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Analysis of standard deviations of rewards based on numBoards:
+	50 =     3.3733
+	100 =    2.2435
+	200 =    1.6263
+	300 =    1.3922
+	400 =    1.2079
+	500 =    1.0467
+	750 =    0.7996
+	1000 =   0.7364
+	1250 =   0.6918
+	1500 =   0.6336
+	2000 =   0.5139
+	3500 =   0.3846
+	5000 =	 ?
+	7500 = 	 ?
+	10000 =  ?

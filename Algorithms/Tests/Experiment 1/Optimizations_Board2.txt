@@ -1,0 +1,366 @@
+Optimization 1 on Board2 hard randomized (Mar 12, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 .05 .05]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.5, 'MeshContraction', .75, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.4433    0.8355    0.0234    0.3998    0.0828    0.1053    4.4064    3.9271
+	Fval = -1458.1
+	Output =
+	  function: @(x)ac_sep_1p4(x,1000)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 83
+        funccount: 1140
+         meshsize: 9.3206e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Optimization 2 on Board2 hard randomized (Mar 12, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 .05 .05]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.5, 'MeshContraction', .75, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 1000
+Result
+	X1 = 0.7668    0.4521    0.0350    0.4353    0.3595    0.0725    1.7004    0.7046
+	Fval = -1519.7
+	Output = 
+	  function: @(x)ac_sep_1p4(x,1000)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 66
+        funccount: 1038
+         meshsize: 9.6871e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Optimization 3 on Board2 hard randomized (Mar 14, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 .05 .05]
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.75, 'MeshContraction', .85, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 10000
+Result
+	Terminated after ~110 iterations, 1059 function evals, and 35 hours
+	Best function value was -1518.23
+	
+Optimization 4 on Board2 hard randomized (Mar 15, 2013):
+Setup
+	X0 = [.5 .8 .5 .8] (alphaR, betaR, alphaP, betaP)
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.75, 'MeshContraction', .85, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 10000
+Result
+	Terminated after 20 hours
+	Best function value was around -1500
+	
+Optimization 5 on Board2 hard randomized (Mar 17, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 1 1]
+	Optimizing over: alphaR, alphaP
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.75, 'MeshContraction', .85, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 10000
+Result
+	X1 = 0.0153    0.0021
+	Fval = -1254.2
+	Output =         
+	  function: @(x)ac_sep_1p6(x,10000)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 126
+        funccount: 432
+         meshsize: 9.9986e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+Optimization 6 on Board2 hard randomized (Mar 19, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 1 1]
+	Optimizing over: alphaR, alphaP
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.75, 'MeshContraction', .85, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 10000
+Result
+	X1 = 0.0266    0.0029
+	Fval = -1241.6
+	Output =         
+      function: @(x)ac_sep_1p6(x,10000)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 113
+        funccount: 396
+         meshsize: 9.4762e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+		  
+		  
+Optimization 7 on Board2 hard randomized (Mar 19, 2013):
+Setup
+	X0 = [.5 .5 .8 .5 .5 .8 1 1]
+	Optimizing over: alphaR, alphaP
+	options = 'UseParallel', 'always', 'CompletePoll', 'on', 'Vectorized', 'off', 'SearchMethod', {@searchlhs}, 'MeshExpansion', 1.75, 'MeshContraction', .85, 'PlotFcns',{@psplotbestf,@psplotfuncount}
+	numPlays = 50
+	numBoards = 10000
+Result
+	X1 = 0.0188    0.0024
+	Fval = -1254
+	Output =         
+      function: @(x)ac_sep_1p6(x,10000)
+      problemtype: 'boundconstraints'
+       pollmethod: 'gpspositivebasis2n'
+     searchmethod: @searchlhs
+       iterations: 122
+        funccount: 413
+         meshsize: 9.3034e-07
+    maxconstraint: 0
+          message: 'Optimization terminated: mesh size less than options.TolMesh.'
+
+TestingNumBoards 1 (Mar 21, 2013):
+differences
+	param_step = .1 (in alphaR - all others @ default of .5's)
+	differences = -17.6757  -15.0203   -0.1244  -28.5189  -13.0407  -29.4485   -6.1238  -29.2655   -6.6940
+	mean(differences) = 16.2124
+	std(differences) = 10.9650
+
+TestingNumBoards 2 (Mar 22, 2013):
+std_devs
+	to_test = [500 750 1000 1500 2000 5000 7500 10000];
+	std_devs = 29.9526   28.9742   23.5706   20.1557   15.8696    9.2798    8.1732    6.6135
+differences
+	param_step = .05 (in alphaR - all others @ default of .5's)
+	fvals = 1.0e+03 *
+			-1.1149   -1.1436   -1.1551   -1.1515   -1.1525   -1.1854   -1.1810   -1.1956   -1.2034   -1.1981   -1.2357   -1.2325   -1.2408   -1.2439   -1.2445  
+			-1.2552  -1.2654   -1.2789   -1.2847   -1.3010
+	differences = -28.7353  -11.4962    3.6531   -0.9883  -32.8969    4.4019  -14.6736   -7.7436    5.2524  -37.5593    3.2025   -8.3279   -3.0399   -0.6799
+				  -10.7043  -10.2015  -13.4591   -5.7815  -16.3254
+	mean(abs(differences)) = 11.5328
+	std(abs(differences)) = 10.6701
+if differences is collapsed into param_step = .1
+	fvals2 = 1.03+03 *
+			-1.1149   -1.1551   -1.1525   -1.1810   -1.2034   -1.2357   -1.2408   -1.2445   -1.2654   -1.2847
+	differences2 = -40.2315    2.6648  -28.4950  -22.4172  -32.3069   -5.1254   -3.7198  -20.9058  -19.2406
+	mean(abs(differences2)) = 19.4563
+	std(abs(differences2)) = 13.3432
+	
+Temp Optimization 1 (Mar 23, 2013):
+Setup
+	Method: mapping
+	Optimized: temp
+	Fixed values:
+		learning rates = .1
+		gammas = .85
+Results
+	fvals = 1.0e+03 *
+	0.0002    0.0003    0.0004    0.0005    0.0006    0.0007    0.0008    0.0009    0.0010    0.0011    0.0012    0.0013    0.0014    0.0015    0.0016    0.0017
+   -1.0318   -1.2393   -1.3160   -1.3639   -1.3841   -1.3829   -1.3728   -1.3726   -1.3591   -1.3509   -1.3542   -1.3228   -1.3217   -1.2908   -1.2771   -1.2963
+	0.0018    0.0019    0.0020    0.0021    0.0022    0.0023    0.0024    0.0025    0.0026    0.0027    0.0028    0.0029    0.0030    0.0031    0.0032    0.0033
+   -1.2748   -1.2627   -1.2465   -1.2471   -1.2439   -1.2376   -1.2213   -1.2215   -1.2087   -1.1985   -1.2023   -1.1846   -1.1825   -1.1738   -1.1719   -1.1663
+	0.0034    0.0035    0.0036    0.0037    0.0038    0.0039    0.0040    0.0041    0.0042    0.0043    0.0044    0.0045    0.0046    0.0047    0.0048    0.0049
+   -1.1635   -1.1627   -1.1598   -1.1558   -1.1593   -1.1447   -1.1416   -1.1271   -1.1248   -1.1333   -1.1345   -1.1210   -1.1211   -1.0996   -1.1211   -1.0942
+	0.0050
+   -1.1055
+   max = .6 -> -1384.1
+   
+Temp Optimization 2 (Mar 23, 2013):
+Setup
+	Method: mapping
+	Optimized: temp
+	Fixed values:
+		learning rates = .2
+		gammas = .85
+Results
+	fvals = 1.0e+03 *
+		0.0002   -1.3974
+		0.0003   -1.4230
+		0.0004   -1.4087
+		0.0005   -1.3768
+		0.0006   -1.3384
+		0.0007   -1.3037
+		0.0008   -1.2844
+		0.0009   -1.2452
+		0.0010   -1.2256
+   max = .3 -> -1423.0
+   
+Temp Optimization 3 (Mar 23, 2013):
+Setup
+	Method: just manually trying values
+	Optimized: temp
+	Fixed values:
+		learning rates = .05
+		gammas = .85
+Results
+	Preliminary efforts indicate something around:
+	max = 1.5 -> -1364.7
+	
+*Optimization 8 on Board2 hard randomized (Mar 24, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = .6
+		Betas = .1
+		Optimizing over: alphaR, alphaP
+	param_step = .05
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .4 and .9
+		alphaP between 0 and .2
+		fvals ~ 1475 and 1495
+		max fval was (.8, .05, 1493.1)
+
+*Optimization 9 on Board2 hard randomized (Mar 24, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = .3
+		Betas = .2
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .3 and 1
+		alphaP between 0 and .3
+		fvals ~ 1475 and 1495
+		max fval was (.5, .1, 1492.1)
+		
+Optimization 10 on Board2 hard randomized (Mar 24, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = 1.5
+		Betas = .05
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .4 and .9
+		alphaP between 0 and .2
+		fvals ~ 1475 and 1495
+		max fval was (.7, .1, 1494.9)
+		
+Optimization 11 on Board2 hard randomized (Mar 27, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = .6
+		Alphas = .1
+		Optimizing over: betaR, betaP
+	param_step = .05
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR between .1 and .15
+		betaP between .1 and 1
+		fvals ~ 1350 and 1380
+		max fval was (.1, .15, 1382.9)
+		
+*Optimization 12 on Board2 hard randomized (Mar 29, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = .6
+		AlphaR = .8
+		AlphaP = .05
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR: .1
+		betaP between .4 and .9
+		fvals ~ 1500
+		max fval was (.1, .5, 1507.2)
+		
+*Optimization 13 on Board2 hard randomized (Mar 29, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = .3
+		AlphaR = .5
+		AlphaP = .1
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR: .2
+		betaP between .3 and 1
+		fvals ~ 1480 to 1500
+		max fval was (.2, .5, 1500.5)
+		
+Optimization 14 on Board2 hard randomized (Mar 29, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Temps = 1.5
+		AlphaR = .7
+		AlphaP = .1
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR: .1
+		betaP between .1 and .4
+		fvals ~ 1390 to 1400
+		max fval was (.1, .2, 1400.4)
+		
+CONCLUSIONS
+
+- Assumed gammas = .85
+
+- Maximized temp over learning rates = .05, .1, .2 (temp opts 1, 2, 3)
+Used that temp in later trials
+
+- Maximized over alphaR and alphaP (opts 8, 9, 10)
+Consistently found: alphaR = .3 to 1 (maxes around .5)
+					alphaP = 0 to .2 (maxes around .1)
+High alphaR, low alphaP
+
+- Maximized over betaR and betaP w/ undifferentiated alphas (opt 11)
+Found: betaR = .1
+	   betaP = .1 to 1
+Low betaR, but betaP could be anywhere
+
+- Maximized over betaR and betaP w/ differentiated alphas (opts 12, 13, 14)
+Using the maximum values from opts 8, 9, 10
+Found: betaR = .1
+	   betaP = .3 to 1
+Low betaR, some (although not clear) evidence for betaP being higher
+
+- Maximum fval:
+Opt11 - alphaR = .8, alphaP = .05, betaR = .1, betaP = .5, fval = 1507.2
+
+- Other notes
+Once the alphas were set at their optimum values, allowing the betas to vary didn't gain that much ground
+In this board, the alpha differentiation was key

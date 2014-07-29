@@ -1,0 +1,249 @@
+Opt 1:
+- Temps = 3
+  Betas = .1
+  Maximizing alphas
+- Result:
+	Fantastic!
+	AlphaR was best around .8; alphaP at .1
+  
+Opt 2:
+- Temps = 3
+  Alphas = optimal
+  Maximizing betas
+- Result:
+	BetaP does matter!  500 difference between betaP = 0 and .1
+	Hardly any gain from betaP > betaR (pretty much best at .1, .1)
+	
+Opt 3:
+- Alphas = optimal (.8 .1)
+  Betas = .1
+  Maximizing temps
+- Result:
+	Best was tempR = 1, tempP = 1.5; about a gain of 35
+	Looked like a promising pattern though
+	
+Opt 4:
+- Punishments more numerous
+- Alphas = optimal (.8 .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	Nothing, amorphous blob of the same
+	
+Opt 5:
+- Punishments more numerous
+- Alphas = optimal (.8 .1)
+  Betas = .1
+  Maximizing temps
+- Result:
+	Wrong direction (kinda)
+	Pretty amorphous blob, but some tendency for tempR to be greater
+	
+Opt 6:
+- Punishments doubled
+- Alphas = optimal (.8 .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	No effect
+	
+Opt 7:
+- Punishments doubled
+- Alphas = optimal (.8 .1)
+  Betas = .1
+  Maximizing temps
+- Result:
+	No effect
+
+Opt 8:
+- One level of only punishments
+- Alphas = optimal (.8 .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	You could gain about 50 by setting betaP > betaR
+	
+Opt 9:
+- One level of only punishments
+- Alphas = optimal (.8 .1)
+  Betas = .1
+  Maximizing temps
+- Result:
+	You could gain about 30 by setting tempP > tempR
+
+Opt 10:
+- Redoing 1 with temps = 1
+- Betas = .1
+  Temps = 1
+  Maximizing alphas
+- Result:
+	Usual effect =D best was .6 or .8, .1
+	
+Opt 11:
+- Redoing 2 with temps = 1
+- Alphas = optimal
+  Temps = 1
+  Maximizing betas
+- Result:
+	Amorphous blob, no effect
+	
+Opt 12:
+- Redoing 10 with non-stochastic
+- Betas = .1
+  Temps = 1
+  Maximizing alphas
+- Result:
+	Exactly the same as stochastic
+	Best at .8, .1
+	
+Opt 13:
+- Redoing 11 with non-stochastic
+- Alphas = optimal
+  Temps = 1
+  Maximizing betas
+- Result:
+	Again, betaP still matters
+	But again, only a very slight advantage of betaP > betaR (not much better than .1, .1)
+	
+Opt 14:
+- Redoing 8 with non-stochastic
+- Alphas = optimal
+  Temps = 1
+  Maximizing betas
+- Result:
+	Similar to Opt 8
+	Could get about a 40-50 boost by setting betaP > betaR
+	
+Opt 15:
+- Normal board, but fine-grained betas
+- Alphas = optimal (.8, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	Both at 1.2 - same
+	
+Opt 16:
+- Doubled board w/ fine-grained betas
+- Alphas = optimal (.8, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+
+Opt 17:
+- Numerous board w/ fine-grained betas
+- Alphas = optimal (.8, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+
+Opt 18:
+- Only board w/ fine-grained betas
+- Alphas = optimal (.8, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	About a 50 increase from betaP > betaR
+
+Opt 19:
+- Doubled board w/ fine-grained betas
+- numPlays = 35
+- Alphas = optimal (.8, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	Nothing
+	
+Opt 20:
+- Board is MUCH more stochastic (see text file)
+Both LT & ST
+- numPlays = 50
+- Betas = (.1, .1)
+  Temps = 1
+  Maximizing alphas
+- Result:
+	Nice.. optimal was alphaR = .3, alphaP = .15
+	
+Opt 21:
+- Board is MUCH more stochastic (see text file)
+Both LT & ST
+- numPlays = 50
+- Alphas = optimal (.3, .15)
+  Temps = 1
+  Maximizing betas
+- Result:
+	Optimal is (.15, .15)
+	
+Opt 22:
+- Board is MUCH more stochastic (see text file)
+Both LT & ST
+- numPlays = 50
+- Alphas = optimal (.3, .15)
+  Betas = .15
+  Maximizing temps
+- Result:
+	Some asymmetry in our direction, but almost nothing
+	
+Opt 23:
+- Board is MUCH more stochastic (see text file)
+Only ST
+- numPlays = 50
+- Betas = (.1, .1)
+  Temps = 1
+  Maximizing alphas
+- Result:
+	Nice.. optimal was high alphaR (.5-.8ish) and low alphaP (.1)
+	
+Opt 24:
+- Board is MUCH more stochastic (see text file)
+Only ST
+- numPlays = 50
+- Alphas = optimal
+  Temps = 1
+  Maximizing betas
+- Result:
+	Amorphous blob
+	
+Opt 25:
+- Board is MUCH more stochastic (see text file)
+Only ST
+- numPlays = 50
+- Alphas = optimal
+  Betas = .15
+  Maximizing temps
+- Result:
+	Basically no effect
+	
+Opt 26:
+- Punishments:
+more (aka -120:60)
+- Stochasticism:
+LT (.3, .15), ST (0, .1), no risk
+- numPlays = 50
+- Alphas = optimal (.4, .1)
+  Temps = 1
+  Maximizing betas
+- Result:
+	Asymmetry, but hardly any benefit
+
+Opt 27:
+- Punishments:
+more (aka -120:60)
+- Stochasticism:
+LT (.3, .15), ST (0, .1), no risk
+- numPlays = 50
+- Alphas = optimal (.4, .1)
+  Betas = (.1, .1)
+  Maximizing temps
+- Result:
+
+
+Opt 28:
+- Punishments:
+more (aka -120:60)
+- Stochasticism:
+LT (.3, .15), ST (0, .1), no risk
+- numPlays = 50
+- Alphas = optimal (.4, .1)
+  Temps = (.5, .5)
+  Maximizing betas
+- Result:

@@ -1,0 +1,118 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="./raphael.js"></script>
+	<script src="./underscore-min.js"></script>
+	<script src="./psyTask_qualtrics-0.2.0.js"></script>
+	<script src="./1Back_SIR-D.js"></script>
+</head>
+<body>
+
+
+	<style>
+	#exp_trial_data {
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		width:500px;
+		word-wrap: break-word;
+	}
+	
+	#exp_experimentSpace {
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		width:500px;
+		}
+	#exp_taskSpace {
+		background-color:limegreen;
+	}
+	
+	#exp_pointSpace {
+		text-align:right;
+		font-family: arial;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	
+	#exp_trialnumSpace {
+		text-align:left;
+		font-family: arial;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	
+	.exp_taskButton {
+		text-align:center;
+		vertical-align:text-bottom;
+		background-color:#ffffff;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:4px solid #000000;
+		display:inline-block;
+		color:#000000;
+		font-family:arial;
+		font-size:40px;
+		font-weight:bold;
+		width:50px;
+		padding: 5px 3px;
+	}
+	.exp_taskButton:hover {
+		background-color:#b3b3b3;
+	}
+	.exp_taskButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	.unsel {
+		-webkit-user-select: none; /* Chrome/Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+ */
+			
+		/* Rules below not implemented in browsers yet */
+		-o-user-select: none;
+		user-select: none;
+		cursor:default;
+	}
+	</style>
+	<div id="exp_experimentSpace">
+		<div>
+			<div id="exp_trialnumSpace">
+				<span class="unsel"> Trial #: </span>
+				<span id="exp_trialnumInfo" class="unsel">1</span>
+			</div>
+			<div id="exp_pointSpace">
+				<span class="unsel"> Points: </span>
+				<span id="exp_pointInfo" class="unsel">0</span>
+			</div>
+		</div>
+	<div id="exp_taskSpace">
+	</div>
+	<div id="exp_buttonSpace" class="unsel">
+		<span class="exp_taskButton unsel" id="button_1">A</span>
+		<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		<span class="exp_taskButton unsel" id="button_2">B</span>
+
+	</div>
+	<div id="debug">
+	</div>
+	<div id="exp_trial_data"></div>
+	</div>
+	
+	<div id="task_parameters"></div>
+	
+	<!-- do not copy below this line -->
+	
+	
+	<div id="task_hint"></div>
+	
+	<script type="text/javascript">
+	var taskparams = randomizeVars();
+	$j("#task_parameters").text(ObjToString(taskparams));
+	
+	runExperiment('random-target', taskparams);
+	</script>
+</body>
+</html>

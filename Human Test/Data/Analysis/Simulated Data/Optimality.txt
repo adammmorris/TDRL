@@ -1,0 +1,25 @@
+OPTIMALITY ANALYSES
+
+alphasMap_2stepdet_rand:
+- Max @ .7,.2
+
+alphasMap_2stepdet_behav:
+- Max @ .6,.1
+
+alphasMap_2stepdet_opt:
+- Max @ .4,.1
+
+alphasMap_2stepsto_rand:
+- Max @ 1,.2
+
+alphasMap_2step3optdet_rand:
+- Max @ .6,.1
+
+alphasMap_2step3optdet_behav:
+- Max @ .5,0
+
+alphasMap_3stepdet_rand:
+- Max @ .5,.1
+
+alphasMap_3stepdet_behav:
+- Max @ .5,.1

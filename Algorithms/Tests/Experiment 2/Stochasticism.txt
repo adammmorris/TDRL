@@ -1,0 +1,21 @@
+LONG TERM:
+
+Each time you shift, randomly decide whether each state is going to go up or down
+
+If up:
+	Shift according to a normal distribution around 30% increase
+		mean: 30%	
+		std_dev: 15%
+If down:
+	Shift according to a normal distribution around -30% increase
+		mean: -30%
+		std_dev: 15%
+		
+SHORT TERM:
+
+Each time you get a reward, shift according to a normal dist around 0% increase
+	mean: 0%
+	std_dev: 5%
+	
+Also, at beginning, give each state a different % chance of switching signs on any given turn
+	(assuming risk, and higher reward -> risk of higher punishment)

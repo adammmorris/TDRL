@@ -1,0 +1,95 @@
+Optimization 1 on Board3 soft randomized (Apr 4, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Betas = .1
+		Temps = .6
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .2 and .6
+		alphaP = 0
+		fvals ~ 1420 to 1440
+		max fval was (.4, 0, 1440.3)
+		
+Optimization 2 on Board3 soft randomized (Apr 4, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Alphas = .1
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR between .1 and .3
+		betaP between 0 and .2
+		fvals ~ 1250 to 1270
+		max fval was (.2, .1, 1272.6)
+		
+Optimization 3 on Board3 soft randomized (Apr 4, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .4, alphaP = 0
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR = .1
+		betaP between .1 and 1
+		fvals ~ 1440 to 1450
+		max fval was (.1, .3, 1459.9)
+	No increase by setting betaP > betaR
+		
+Optimization 4 on Board3 soft randomized (Apr 4, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .5, alphaP = 0
+		Temps = .3
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR between .2 and .3
+		betaP between .2 and 1
+		fvals ~ 1430 to 1450
+		max fval was (.2, .8, 1452.3)
+		
+Optimization 5 on Board3 soft randomized (Apr 4, 2013):
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		AlphaR = .5, alphaP = 0
+		Betas = .1
+		Optimizing over: tempR, tempP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		tempP between .4 and 1
+		betaP between .6 and 1
+		fvals ~ 1420 to 1450
+		max fval was amorphous blob

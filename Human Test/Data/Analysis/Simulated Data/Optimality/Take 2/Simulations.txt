@@ -1,0 +1,15 @@
+Alpha-BetaTimesTemp:
+- alpha x beta*temp
+- best was alpha = .3, beta*temp = 2
+
+Beta-Temp:
+- beta x temp (using alpha = .3)
+- best was anything past beta=.3,temp=1
+
+BetaR-BetaP:
+- betaR x betaP (using alpha = .3, temp = 2)
+- best was betaR=.5, betaP=.9
+
+AlphaR-AlphaP:
+- alphaR x alphaP (using betaR = .5, betaP = .9, temp = 2)
+- worked :)

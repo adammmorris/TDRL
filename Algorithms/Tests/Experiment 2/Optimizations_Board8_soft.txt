@@ -1,0 +1,13 @@
+Opt 1:
+- Temps = 3
+  Betas = .1
+  Maximizing alphas
+- Result:
+  Usual
+  
+Opt 2:
+- Temps = 3
+  Alphas = optimal
+  Maximizing betas
+- Result
+  No gain from setting betaP > betaR

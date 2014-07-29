@@ -1,0 +1,9 @@
+TODO
+
+For daw's data:
+- Test whether individual differences in this predict score
+- Check betas also
+- Am I supposed to be optimizing the parameters (by likelihood), or just testing hypotheses?
+
+load "Data 1"
+[~, ~, ~, like, like_alt] = ac_sep_daw([.5 0 .5 .5 1.5 1.5], [.5 .5 .5 .5 1.5 1.5], 82, 150, idnum, a1, s2, a2, re, round, toss, beta, lr1, 0);

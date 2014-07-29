@@ -1,0 +1,10 @@
+- What brought the alphaR down to .3 was specifically the LT stochasticism; w/ just ST, it was back up to .8
+And no difference for the betas
+And taking away long-term LT actually reduced asymmetry in temps
+
+To try:
+- Try more fine-grained analysis on temps
+- See if I can bring out whatever asymmetry there is
+	W/ the usual tricks
+	By setting lower temps for the beta analysis
+- Check the variability on that asymmetry (to see if, even small, it might make a difference)

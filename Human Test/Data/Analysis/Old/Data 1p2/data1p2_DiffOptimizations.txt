@@ -1,0 +1,22 @@
+1:
+- Starting pt = [0 0 0 0 1]
+- Result:
+.1595 .5406 .2557 .1292 .1179 1.0666E4
+
+2:
+- Starting pt = [0 0 0 0 1]
+- Result: same
+
+3:
+- Starting pt = [1 1 1 1 1]
+- Result: same
+
+4:
+- With toss iff alpha < .1 || beta*temp < .01
+- Result:
+.28 .65 .15 .1 .36 7.518E3
+
+5:
+- With toss iff alpha < .2 || beta*temp < .01
+- Result:
+Same idea

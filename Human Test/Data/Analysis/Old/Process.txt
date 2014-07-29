@@ -1,0 +1,6 @@
+Process:
+
+(1) Maximize ABT individually using an undifferentiated model, bounding lrs between [.01, 1] and temp between [.1, 2].
+Why?  Because this gave consistent results from patternsearch.  Alphas were very consistent, and betas*temps were very consistent.
+(2) Decide who to toss.  Current criteria: toss iff alpha < .1 || beta*temp < .002
+I need to check that this criteria works on old data sets

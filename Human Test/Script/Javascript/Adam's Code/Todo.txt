@@ -1,0 +1,6 @@
+TO DO
+
+- Rewrite state transition
+- Rewrite display so that it displays properly
+- Rewrite reward system
+- Rewrite trial system

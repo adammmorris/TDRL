@@ -1,0 +1,12 @@
+Temp opt (undifferentiated):
+- Alphas = .1, betas = .1
+Best was 3.5
+
+Opt 1 (alphas w/ 'more'):
+- Betas = .1, temps = 3.5
+
+Opt 2 (betas w/ 'more'):
+- Alphas = optimal, temps = 3.5
+
+Opt 3 (temps w/ 'more'):
+- Alphas = optimal, betas = .1

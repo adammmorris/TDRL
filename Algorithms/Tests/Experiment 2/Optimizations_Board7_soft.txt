@@ -1,0 +1,70 @@
+Optimization 1:
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Betas = .1
+		Temps = .6
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		alphaR between .2 and .6
+		alphaP = 0
+		fvals ~ 1220
+		max fval was (.3, 0, 1225.9)
+		
+Optimization 2:
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Alphas = .1
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		usual
+		
+Optimization 3:
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		Alphas = optimal from opt 1
+		Temps = .6
+		Optimizing over: betaR, betaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		betaR = .1
+		betaP between .1 and 1
+		fvals ~ 1480 to 1500
+		max fval was (.1, .1, 1286.2)
+	You could do about 0 better by having betaP > betaR
+		
+Optimization 4:
+Setup
+	Method: mapping
+	Variables
+		Gammas = .85
+		BetaR = .2, BetaP = .2
+		Temps = .6
+		Optimizing over: alphaR, alphaP
+	param_step = .1
+	numPlays = 50
+	numInstances = 10000
+Result
+	fvals: see data in Values folder, graph in Graphs folder
+	max:
+		fvals were same as Opt 3

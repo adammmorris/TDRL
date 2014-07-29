@@ -1,0 +1,31 @@
+function printState(round,state,action,newstate,valuez, policy, rewards)
+% valuez = num2str(valuez);
+% policy = num2str(policy);
+% rewards = num2str(rewards);
+p = 2;
+fprintf('\n');
+fprintf('****************************');
+fprintf('\n');
+fprintf(['ROUND ',num2str(round)]);
+fprintf('\n');
+fprintf(['state= ',num2str(state),', action= ',num2str(action),', newstate= ',num2str(newstate)]);
+fprintf('\n');
+fprintf('\n');
+fprintf(['              ',num2str(valuez(1),p)]);
+fprintf('\n');
+fprintf('\n');
+fprintf(['         ',num2str(policy(1,1),p),'      ',num2str(policy(1,2),p)]);
+fprintf('\n');
+fprintf('\n');
+fprintf(['      ',num2str(valuez(2),p),'             ',num2str(valuez(3),p)]);
+fprintf('\n');
+fprintf('\n');
+fprintf(['  ',num2str(policy(2,1),p),'     ',num2str(policy(2,2),p),'       ',num2str(policy(3,1),p),'     ',num2str(policy(3,2),p)]);
+fprintf('\n');
+fprintf('----------------------------');
+fprintf('\n');
+fprintf([num2str(rewards(1),p),'        ',num2str(rewards(2),p),'        ',num2str(rewards(3),p),'      ',num2str(rewards(4),p)]);
+fprintf('\n');
+fprintf('****************************');
+fprintf('\n\n');
+end
