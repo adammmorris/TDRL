@@ -3,17 +3,11 @@
 %   models
 
 comb = 1;
-temp = .5;
-gamma = .85;
-
-actions = [A1 A2];
-states = [1 S2];
-rewards = [0 Re];
 
 starts = [0 0 0 0; .5 .5 5 .5; 1 1 10 1];
 bounds = [0 0 0 0; 1 1 10 1];
-model = @(x,actions,states,rewards,roundNum,comb) getIndivLike_AC([x(1) x(1) x(2) x(2) temp x(3) x(4) x(4) gamma gamma]);
-[optIndivParams_ABSE_comb3] = getIndivParams_TDRL(model,id,actions,states,rewards,round1,comb,starts,[],[],bounds,[]);
+model = @(x,actions,states,rewards,roundNum,comb) getIndivLike_AC(
+[optIndivParams_ABSE_comb3] = getIndivParams_TDRL(@getIndivLike_AC,'ABSE',id,A1,S2,A2,S3,A3,Re,round1,normed,starts,[],[],bounds,[]);
 
 % % starts = [0 0 0 0 0; .5 .5 5 .5 .5; 1 1 10 1 1];
 % % bounds = [0 0 0 0 0; 1 1 10 1 1];

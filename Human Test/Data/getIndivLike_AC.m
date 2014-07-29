@@ -2,7 +2,7 @@
 % This is our actor-critic model.
 
 %% Params
-% x: [alphaR alphaP betaR betaP temp stay eligR eligP] (length=8)
+% x: [alphaR alphaP betaR betaP temp stay eligR eligP gammaR gammaP] (length=10)
 % actions: [A1 A2] or [A1 A2 A3]
 %   should all be 1 or 2
 % states: [1 S2] or [1 S2 S3]
@@ -59,8 +59,8 @@ temp = x(5);
 stay = x(6);
 eligR = x(7);
 eligP = x(8);
-gammaR = .85;
-gammaP = .85;
+gammaR = x(9);
+gammaP = x(10);
 
 % Set up initial state/action preference matrix (actor) and initial value
 %   matrix (critic)

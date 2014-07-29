@@ -5,9 +5,10 @@
 
 %% Inputs:
 % model should be a handle to a function that:
-%   takes a single subject's a1,s2,a2,re as input
+%   takes a single subject's info as input
 %   and outputs the negLL
-%   more specifically, it should be model(type,x,a1,s2,a2,re,normed)
+%   more specifically, it should be
+%   model(x,actions,states,rewards,round#,combined)
 % starts should be a k x numParams matrix, where k is the number of
 %   different starts we want to do (and then take the best of)
 % A and b are the linear constraint vectors
@@ -18,14 +19,10 @@
 % optimalParams is a numSubjects x (numParams+2) matrix
 % First column is id, last is negLL
 
-function [optimalParams] = getIndivParams_TDRL(model,type,id,a1,s2,a2,re,round1,normed,starts,A,b,bounds,tosslist)
+function [optimalParams] = getIndivParams_TDRL(model,id,actions,states,rewards,round1,comb,starts,A,b,bounds,tosslist)
 % Get the list of subjects
 subjMarkers = getSubjMarkers(id);
 numSubjects = length(subjMarkers);
-
-if nargin < 13
-    tosslist = [];
-end
 
 % Get the parameter info
 if (size(starts,2) ~= size(bounds,2))
@@ -58,7 +55,7 @@ for thisStart = 1:numStarts
             end
             
             % Do patternsearch
-            [max_params(:,thisStart,thisSubj),lik(thisStart,thisSubj),~] = patternsearch(@(params) model(type,params,a1(index),s2(index),a2(index),re(index),round1(index),normed),starts(thisStart,:),A,b,[],[],bounds(1,:),bounds(2,:),options);
+            [max_params(:,thisStart,thisSubj),lik(thisStart,thisSubj),~] = patternsearch(@(params) model(params,actions(index),states(index),rewards(index),round1(index),comb),starts(thisStart,:),A,b,[],[],bounds(1,:),bounds(2,:),options);
         end
     end
 end
