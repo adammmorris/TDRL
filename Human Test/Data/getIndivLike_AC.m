@@ -60,7 +60,8 @@ stay = x(6);
 eligR = x(7);
 eligP = x(8);
 gammaR = x(9);
-gammaP = x(10);
+gammaP = gammaR; % making them the same.. makes the algorithm easier
+%gammaP = x(10);
 
 % Set up initial state/action preference matrix (actor) and initial value
 %   matrix (critic)
@@ -106,7 +107,7 @@ for thisRound = 1:size(actions,1)
             end
             
             % Give stay bonus
-            if prevActions(thisMove), temppolicy(state,prevActions(thisMove)) = policy(state,prevActions(thisMove))+stay; end
+            if prevActions(thisMove), temppolicy(state,prevActions(thisMove)) = temppolicy(state,prevActions(thisMove))+stay; end
             % Do move
             probs = softmax_TDRL(temp,temppolicy(state,:),0);
             % Update likelihood
@@ -117,7 +118,7 @@ for thisRound = 1:size(actions,1)
             % Combined model?
             if comb == 1
                 % Reward? Use r parameters
-                if reward >= 0
+                if (reward + gammaR*values(newstate)) >= 0
                     alpha = alphaR;
                     beta = betaR;
                     elig = eligR;
@@ -164,6 +165,8 @@ for thisRound = 1:size(actions,1)
             end
         end
     end
+    
+    prevActions = actions(thisRound,:);
 end
 
 likelihood = -likelihood; % for patternsearch (or fmincon)

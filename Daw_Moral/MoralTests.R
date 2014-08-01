@@ -1,0 +1,33 @@
+# MoralTests.R
+# Commands for testing moral stuff from 2-step task
+# Adam Morris, 8/1/2014
+
+# Get data
+path = "/home/amm4/git/TDRL/Human Test/Data/Analysis/Real Data v2/Take 2";
+predictors = read.csv(paste(path,"/Predictors.csv",sep=""));
+dvs = read.csv(paste(path,"/DVs.csv",sep=""));
+
+# Create uncommon model & get slopes
+predictors_uncommon <- predictors[(predictors$Common==-1),]
+model_uncommon <- glmer(Stay~Reinf+(1+Reinf|Subj),family=binomial,data=predictors_uncommon);
+model_uncommon_coef <- coef(model_uncommon);
+model_uncommon_slopes <- model_uncommon_coef$Subj$Reinf;
+
+# Create all model & get slopes
+model_all <- glmer(Stay~Reinf*Common+(1+Reinf*Common|Subj),family=binomial,data=predictors);
+model_all_coef = coef(model_all);
+model_all_MFslopes = model_all_coef$Subj$Reinf;
+model_all_MBslopes = model_all_coef$Subj$"Reinf:Common";
+
+# WITH RP
+model_uncommon_rp <- glmer(Stay~Reinf*RP+(1+Reinf*RP|Subj),family=binomial,data=predictors_uncommon);
+model_uncommon_coef <- coef(model_uncommon);
+model_uncommon_slopes <- model_uncommon_coef$Subj$Reinf;
+
+# Create all model & get slopes
+model_all_rp <- glmer(Stay~Reinf*Common*RP+(1+Reinf*Common*RP|Subj),family=binomial,data=predictors);
+model_all_rp_coef = coef(model_all_rp);
+model_all_MFslopes_R = model_all_rp_coef$Subj$"Reinf:RP";
+model_all_MFslopes_P = model_all_rp_coef$Subj$Reinf;
+model_all_MBslopes_R = model_all_rp_coef$Subj$"Reinf:Common:RP";
+model_all_MBslopes_P = model_all_rp_coef$Subj$"Reinf:Common";
