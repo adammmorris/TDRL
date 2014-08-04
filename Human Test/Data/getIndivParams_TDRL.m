@@ -5,9 +5,10 @@
 
 %% Inputs:
 % model should be a handle to a function that:
-%   takes a single subject's a1,s2,a2,re as input
+%   takes a single subject's info as input
 %   and outputs the negLL
-%   more specifically, it should be model(type,x,a1,s2,a2,re,normed)
+%   more specifically, it should be
+%   model(x,actions,states,rewards,round#,combined)
 % starts should be a k x numParams matrix, where k is the number of
 %   different starts we want to do (and then take the best of)
 % A and b are the linear constraint vectors
@@ -18,57 +19,40 @@
 % optimalParams is a numSubjects x (numParams+2) matrix
 % First column is id, last is negLL
 
-function [optimalParams] = getIndivParams_TDRL(model,type,id,a1,s2,a2,re,round1,normed,starts,A,b,bounds,tosslist)
+function [optimalParams] = getIndivParams_TDRL(model,id,actions,states,rewards,round1,comb,A,b,numStarts,bounds,thisSubj)
 % Get the list of subjects
 subjMarkers = getSubjMarkers(id);
-numSubjects = length(subjMarkers);
 
-if nargin < 13
-    tosslist = [];
-end
-
-% Get the parameter info
-if (size(starts,2) ~= size(bounds,2))
-    error('starts and bounds must have the same amount of columns');
-end
-numParams = size(starts,2);
-numStarts = size(starts,1);
+numParams = size(bounds,2);
 
 % Set patternsearch options
-options = psoptimset('CompleteSearch','on','SearchMethod',{@searchlhs},'UseParallel','Always');    
-
-% Set up results matrix
-optimalParams = zeros(numSubjects,numParams+2); % first column will be id, last will be negLL
+options = psoptimset('CompleteSearch','on','SearchMethod',{@searchlhs},'UseParallel','Never');
 
 % Temporary variables
-max_params = zeros(numParams,numStarts,numSubjects);
-lik = zeros(numStarts,numSubjects);
+max_params = zeros(numParams,numStarts);
+lik = zeros(numStarts,1);
+
+starts = zeros(numStarts,numParams);
+% Generate starts
+for i=1:numParams
+    starts(:,i) = linspace(bounds(1,i),bounds(2,i),numStarts);
+end
 
 %% Loop through starts
 for thisStart = 1:numStarts
     % Loop through subjects
-    parfor thisSubj = 1:numSubjects
-        % Do we want to use this person?
-        if ~any(tosslist == thisSubj)
-            % Get the appropriate index
-            if thisSubj < length(subjMarkers)
-                index = subjMarkers(thisSubj):(subjMarkers(thisSubj + 1) - 1);
-            else
-                index = subjMarkers(thisSubj):length(id);
-            end
-            
-            % Do patternsearch
-            [max_params(:,thisStart,thisSubj),lik(thisStart,thisSubj),~] = patternsearch(@(params) model(type,params,a1(index),s2(index),a2(index),re(index),round1(index),normed),starts(thisStart,:),A,b,[],[],bounds(1,:),bounds(2,:),options);
-        end
+    if thisSubj < length(subjMarkers)
+        index = subjMarkers(thisSubj):(subjMarkers(thisSubj + 1) - 1);
+    else
+        index = subjMarkers(thisSubj):length(id);
     end
+    
+    % Do patternsearch
+    [max_params(:,thisStart),lik(thisStart),~] = patternsearch(@(params) model(params,actions(index,:),states(index,:),rewards(index,:),round1(index),comb),starts(thisStart,:),A,b,[],[],bounds(1,:),bounds(2,:),options);
 end
 
 % Take best results
-for thisSubj = 1:numSubjects
-    [~,bestStart] = min(lik(:,thisSubj)); % minimum likelihood
-    optimalParams(thisSubj,:) = [thisSubj max_params(:,bestStart,thisSubj)' lik(bestStart,thisSubj)];
-end
 
-% Get rid of tossed rows
-optimalParams = removerows(optimalParams,'ind',tosslist);
+[~,bestStart] = min(lik); % minimum likelihood
+optimalParams = [thisSubj max_params(:,bestStart)' lik(bestStart)];
 end
